@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        padding: 50px;
+      }
+      .grapf {
+        height: 40px;
+        background-color: #ccc;
+        border-radius: 20px;
+        margin: 0 0 10px;
+      }
+      .grapf span {
+        display: block;
+        padding: 0 10px;
+        height: 40px;
+        line-height: 40px;
+        text-align: right;
+        color: white;
+        border-radius: 40px;
+        box-sizing: border-box;
+      }
+
+      .grapf.stack1 span {
+        animation: stack 2s 1;
+        background-color: pink;
+      }
+      .grapf.stack2 span {
+        animation: stack2 2s 1;
+        background-color: skyblue;
+      }
+      .grapf.stack3 span {
+        animation: stack3 2s 1;
+        background-color: orange;
+      }
+
+      @keyframes stack {
+        0% {
+          width: 0%;
+          color: rgb(255, 255, 255, 0);
+        }
+        40% {
+          color: rgb(255, 255, 255, 1);
+        }
+        100% {
+          width: 75%;
+        }
+      }
+      @keyframes stack2 {
+        0% {
+          width: 0%;
+          color: rgb(255, 255, 255, 0);
+        }
+        40% {
+          color: rgb(255, 255, 255, 1);
+        }
+        100% {
+          width: 65%;
+        }
+      }
+      @keyframes stack3 {
+        0% {
+          width: 0%;
+          color: rgb(255, 255, 255, 0);
+        }
+        40% {
+          color: rgb(255, 255, 255, 1);
+        }
+        100% {
+          width: 25%;
+        }
+      }
+    </style>
+    <div class="grapf stack1">
+      <span style="width: 75%">75%</span>
+    </div>
+    <div class="grapf stack2">
+      <span style="width: 65%">65%</span>
+    </div>
+    <div class="grapf stack3">
+      <span style="width: 25%">25%</span>
+    </div>
+  </body>
+</html>
